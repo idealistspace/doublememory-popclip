@@ -1,0 +1,27 @@
+{
+  "identifier": "com.idealistspace.doublememory.popclip",
+  "name": "DoubleMemory",
+  "description": "Save the selected text or link to DoubleMemory.",
+  "popclip version": 6159,
+  "icon": "symbol:brain",
+  "keywords": "doublememory save capture memory bookmark read later",
+  "shell script rationale": "Percent-encodes the selection and hands it to the DoubleMemory app through its doublememory:// URL scheme, using `open -g` so the app captures in the background without taking focus from what the user is reading.",
+  "options": [
+    {
+      "identifier": "tag",
+      "label": "Hashtag",
+      "type": "string",
+      "default value": "",
+      "description": "Optional hashtag added to every saved item, for example: inbox"
+    }
+  ],
+  "actions": [
+    {
+      "title": "Save to DoubleMemory",
+      "icon": "symbol:brain",
+      "requirements": ["text"],
+      "shell script file": "save.sh",
+      "after": "show-status"
+    }
+  ]
+}

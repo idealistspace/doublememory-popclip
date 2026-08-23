@@ -1,0 +1,4 @@
+# Tells the PopClip Extensions Directory which packages in this repo to publish.
+# See https://www.popclip.app/extensions/submit
+include: DoubleMemory.popclipext
+versionPrefix: v
