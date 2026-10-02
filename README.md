@@ -8,7 +8,7 @@ DoubleMemory inbox. Capture happens in the background, so focus stays where you 
 
 ## Install
 
-Until this is published in the PopClip Extensions Directory, install it by hand:
+To install it by hand instead of from the directory:
 
 1. Download this repo (**Code → Download ZIP**) and unzip it.
 2. Double-click `DoubleMemory.popclipext`.
@@ -50,24 +50,19 @@ reach DoubleMemory through the share sheet, drag and drop, or the clipboard.
 
 ## Publishing
 
-Not yet submitted to the [PopClip Extensions Directory](https://www.popclip.app/extensions/).
-`popclip-directory.yaml` is in place. What remains:
+Published through the [PopClip Extensions Directory](https://www.popclip.app/extensions/). The
+**PopClip Directory GitHub app** is installed on this repo and `popclip-directory.yaml` points it
+at `DoubleMemory.popclipext`.
 
-1. Install the **PopClip Directory GitHub app** on this repo.
-2. Set `popclip version` in `DoubleMemory.popclipext/Config.json` to the PopClip build actually
-   tested against — it currently claims `6159`, the shipping version at the time of writing
-   rather than one that was verified.
-3. Push a `v1.0.0` tag to trigger submission.
+To release a new version, push a `v`-prefixed tag (for example `v1.0.1`). The directory runs a
+Submission Check on the tagged commit and comments with the result.
 
-Two things to confirm on a real install first:
+`popclip version` in `Config.json` is `6221` (PopClip 2026.8.1), the build this was tested against.
 
-- That the **Hashtag** option arrives as `POPCLIP_OPTION_TAG`. PopClip documents options as
-  `POPCLIP_OPTION_*` without stating whether the identifier is uppercased, so `save.sh` accepts
-  either spelling.
-- Whether PopClip's built-in `POPCLIP_URLENCODED_TEXT` can replace the `url_encode` helper in
-  `save.sh`. It would remove twenty lines, but only if it escapes `&` — an encoder that lets
-  query-reserved characters through would truncate any selection containing one. The hand-rolled
-  encoder escapes everything outside the RFC 3986 unreserved set.
+Still open: whether PopClip's built-in `POPCLIP_URLENCODED_TEXT` can replace the `url_encode`
+helper in `save.sh`. It would remove twenty lines, but only if it escapes `&` — an encoder that
+lets query-reserved characters through would truncate any selection containing one. The
+hand-rolled encoder escapes everything outside the RFC 3986 unreserved set.
 
 ## License
 

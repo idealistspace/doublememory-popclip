@@ -2,7 +2,7 @@
   "identifier": "com.idealistspace.doublememory.popclip",
   "name": "DoubleMemory",
   "description": "Save the selected text or link to DoubleMemory.",
-  "popclip version": 6159,
+  "popclip version": 6221,
   "icon": "icon.svg",
   "keywords": "doublememory save capture memory bookmark read later",
   "shell script rationale": "Percent-encodes the selection and hands it to the DoubleMemory app through its doublememory:// URL scheme, using `open -g` so the app captures in the background without taking focus from what the user is reading.",
