@@ -3,7 +3,7 @@
   "name": "DoubleMemory",
   "description": "Save the selected text or link to DoubleMemory.",
   "popclip version": 6159,
-  "icon": "symbol:brain",
+  "icon": "icon.svg",
   "keywords": "doublememory save capture memory bookmark read later",
   "shell script rationale": "Percent-encodes the selection and hands it to the DoubleMemory app through its doublememory:// URL scheme, using `open -g` so the app captures in the background without taking focus from what the user is reading.",
   "options": [
@@ -18,7 +18,7 @@
   "actions": [
     {
       "title": "Save to DoubleMemory",
-      "icon": "symbol:brain",
+      "icon": "icon.svg",
       "requirements": ["text"],
       "shell script file": "save.sh",
       "after": "show-status"
